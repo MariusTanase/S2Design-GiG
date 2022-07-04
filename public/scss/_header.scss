@@ -1,8 +1,8 @@
-.container{
+.container {
     padding: 0 3rem;
 }
 
-#landing{
+#landing {
     position: relative;
 
     display: flex;
@@ -10,60 +10,75 @@
 
     width: 100%;
     height: 120vh;
-    
 
-    .header{
-        background: $header-bg;
+    // Navbar
+    .header {
+        // background: $header-bg;
 
         width: 100%;
 
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
-        h1{
+
+        h1 {
             font-size: 2rem;
+            text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.75);
         }
 
-        ul{
+        ul {
             display: flex;
-            
-            li{
+
+            li {
                 list-style: none;
                 padding: 0 1.5rem;
 
-                a{
+                a {
                     font-size: 1em;
                     color: $text-color;
 
                     text-decoration: none;
+
+                    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.75);
                 }
             }
         }
 
-        button{
-            padding: 1rem 2rem;
-        }
 
-        #button__header{
-                background: $button-bg;
+
+        #button__header {
+            width: 150px;
+            height: 40px;
+
+            background: $button-bg;
+
+            font-size: 1rem;
+            font-weight: $semi-bold;
+
+            color: $text-color;
+
+            border: none;
+            border-radius: 32px;
         }
     }
 
-    img{
+
+    // Background images in HERO
+    img {
         position: absolute;
         height: 120vh;
         z-index: -1;
 
-        .hero__house{
+        .hero__house {
             position: absolute;
-            bottom:0;
+            bottom: 0;
             width: 100%;
             height: 100%;
         }
     }
 
-    .hero__clipart{
+    // White lines over houses
+    .hero__clipart {
         background: #fff;
 
         position: absolute;
@@ -77,4 +92,3 @@
     }
 
 }
-
