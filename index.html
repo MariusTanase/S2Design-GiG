@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/public/dist/css/main.min.css">
-    <title>Document</title>
+    <title>S2Design</title>
 </head>
 
 <body>
-
-
     <section id="landing">
         <section class="header" id="container">
             <h1>S2<span>Design</span></h1>
@@ -21,7 +22,7 @@
                         <a href="#about">Despre</a>
                     </li>
                     <li class="navbar__link">
-                        <a href="Services">Servicii</a>
+                        <a href="#services">Servicii</a>
                     </li>
                     <li class="navbar__link">
                         <a href="#projects">Proiecte</a>
@@ -35,17 +36,28 @@
             <button class="button__responsive">Menu</button>
         </section>
 
-        <section>
+        <section class="hero container">
             <section class="hero__text-wrapper">
                 <h2 class="hero__title">The Creative way to create your dream home</h2>
-                <p class="hero__description">Let's find your dream home with S2 Design.Partner with a local contractors to design the home or
+                <p class="hero__description">Let's find your dream home with S2 Design.<br>Partner with a local
+                    contractors to design the home or
                     apartment that you envision</p>
             </section>
             <section class="hero__form">
                 <form>
-                    <input type="text" name="location" id="" placeholder="Find your location">
-                    <input type="text" name="location" id="" placeholder="Choose your budget">
-                    <input type="text" name="location" id="" placeholder="Apartment">
+                    <div class="form__div border">
+                        <label for="location">Location <i class="fa-solid fa-location-pin"></i></label>
+                        <input type="text" name="location" id="location" placeholder="Find your location">
+                    </div>
+                    <div class="form__div border">
+                        <label for="budget">Budget <i class="fa-solid fa-dollar-sign"></i></i></label>
+                        <input type="text" name="location" id="budget" placeholder="Choose your budget">
+                    </div>
+                    <div class="form__div">
+                        <label for="type">Type of home <i class="fa-solid fa-house"></i></label>
+                        <input type="text" name="location" id="type" placeholder="Apartment">
+                    </div>
+                    <button class="submit__button"><i class="fa-solid fa-magnifying-glass-location"></i></button>
                 </form>
             </section>
         </section>

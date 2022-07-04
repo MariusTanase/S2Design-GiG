@@ -1,0 +1,99 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+    .hero__text-wrapper {
+        margin-top: 5rem;
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .hero__title {
+            width: 24ch;
+            font-size: 2rem;
+            text-align: center;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero__description {
+            margin-top: 1rem;
+            font-size: 1rem;
+            text-align: center;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+        }
+    }
+
+    .hero__form {
+        margin-top: 3rem;
+        width: auto;
+        height: auto;
+        background-color: $header-bg;
+        border-radius: 4rem;
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            padding: 0 1rem;
+            input,
+            label {
+                display: block;
+
+                color: $dark-text;
+
+                border-radius: 1rem;
+                border: none;
+                padding: 0rem 1rem;
+            }
+
+            input{
+                font-size: 12px;
+            }
+
+            label{
+                font-size: 1rem;
+                margin-bottom: .25rem;
+
+                font-weight: $semi-bold;
+            }
+            .form__div{
+                padding: 0 1rem;
+                margin: 1.25rem 0;
+            }
+            .border {
+                border-right: 2px solid rgba(0, 0, 0, 0.6);
+                height: 60%;
+            }
+
+            .submit__button{
+                width: 3rem;
+                height: 3rem;
+    
+                background: $button-bg;
+    
+                font-size: 1rem;
+                font-weight: $semi-bold;
+    
+                color: $text-color;
+    
+                border: none;
+                border-radius: 32px;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                i{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+}
