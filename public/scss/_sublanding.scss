@@ -1,0 +1,17 @@
+.sub__landing{
+    height: auto;
+    // background: $button-bg;
+
+    .sub__landing-text{
+        width: 50%;
+
+        margin: 0 auto;
+        padding: 2rem 0;
+
+        color: $dark-text;
+        text-align: center;
+        line-height: 135%;
+        letter-spacing: 3.5px;
+        font-weight: $subtire;
+    }
+}
