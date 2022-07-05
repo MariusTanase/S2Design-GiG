@@ -4,8 +4,8 @@ $rgb: 220;
 $sat: 90%;
 
 $header-bg: hsl($rgb, $sat, 95%);
-$text-color: hsl($rgb, $sat, 95%);
-$button-bg: hsl(330, 53%, 56%);
+$text-color: hsl($rgb, $sat, 90%);
+$button-bg: hsl(calc($rgb + 100), 53%, 56%);
 $dark-text: hsl($rgb, $sat, 10%);
 
 $regular: 400;
