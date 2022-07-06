@@ -1,0 +1,25 @@
+.card__container {
+    
+    .card__text-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        min-height: 15vh;
+        margin: 1rem 0;
+        .card__title {
+            color: $dark-text;
+            font-size: 2.5rem;
+            min-width: 40%;
+        }
+
+        .card__description{
+            font-size: .75rem;
+            color: $card-text;
+            text-align: center;
+            line-height: 135%;
+            letter-spacing: 0.1rem;
+            margin: 0 auto;
+            max-width: 40%;
+        }
+    }
+}

@@ -46,19 +46,24 @@
             align-items: center;
             flex-direction: row;
             padding: 0 1rem;
+
             input,
             label {
                 display: block;
 
                 color: $dark-text;
-
+                border-color: none;
                 border-radius: 1rem;
-                border: none;
                 padding: 0rem 1rem;
             }
 
-            input{
+            input[type=text]{
                 font-size: 12px;
+                background: $header-bg;
+                border: none;
+            }
+            input:focus{
+                box-shadow: 4px 4px 5px 4px rgba(0,0,0,0.3);
             }
 
             label{
