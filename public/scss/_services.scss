@@ -7,6 +7,10 @@
     line-height: 150%;
     letter-spacing: 1px;
 
+    & > *{
+        flex-basis: 100%;
+    }
+
     .services__flex {
         width: auto;
         min-height: 370px;
@@ -22,8 +26,6 @@
             max-width: 605px;
             height: 370px;
             position: relative;
-
-            flex-basis: 100%;
 
             .services__description {
                 padding: 0 1rem;
@@ -67,7 +69,6 @@
             max-width: 605px;
             height: 370px;
             position: relative;
-            flex-basis: 100%;
             
             .services__description {
                 padding: 0 1rem;
@@ -106,7 +107,6 @@
                 z-index: -1;
             }
         }
-
     }
 
     .services__bedroom {
@@ -115,7 +115,6 @@
         position: relative;
         min-height: 370px;
         max-height: 370px;
-        flex-basis: 100%;
 
         background-position: center;
         background-size: cover;
