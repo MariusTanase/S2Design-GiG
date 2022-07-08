@@ -10,6 +10,8 @@
     position: relative;
     z-index: 1;
     overflow: hidden;
+    max-width: 1400px;
+    margin: 0 auto;
 
     .card {
         // all the cards has to be equal on height and witdh

@@ -25,16 +25,17 @@
         align-self: center;
         justify-self: flex-start;
         color: $dark-text;
-
+        
         .about__title {
             font-size: 2.5rem;
             line-height: 160%;
-
+            max-width: 20ch;
             width: 100%;
             margin-bottom: 3rem;
         }
 
         .about__text {
+            
             font-size: 1rem;
             font-weight: $subtire;
             width: 100%;
