@@ -1,22 +1,18 @@
 //Variabile
 const resposiveButton = document.querySelector('.button__responsive');
 const cardContainer = document.querySelector("#cards");
-
+const resetScroll = document.querySelector(".resetScroll");
 //Buton de mobil
-resposiveButton.addEventListener('click', () =>{
+resposiveButton.addEventListener('click', () => {
     const nav = document.querySelector('nav');
     nav.classList.toggle('nav__active');
 
-     if(!nav.classList.contains('nav__active')){
+    if (!nav.classList.contains('nav__active')) {
         nav.classList.add("fadeOutAnimation")
     }
 })
 
 // Sectiunea de carduri
-
-
-
-
 const item = [{
         name: "Dormitory Design",
         image: "./public/dist/images/cards/Image 1.jpg",
@@ -45,8 +41,6 @@ const item = [{
         date: "12/12/2015"
     }
 ];
-
-
 //create a card based on counter and show it on the screen
 function createCard(item) {
     //Create card section
@@ -86,10 +80,7 @@ function createCards(item) {
 }
 
 // Creating animation to remove first element and add it to the end of the array at each 3 seconds
-
-
 let counter = 4;
-
 function removeFirstElement() {
     const firstElement = document.querySelector(".card");
     cardContainer.removeChild(firstElement);
@@ -110,7 +101,6 @@ function removeFirstElement() {
 createCards(item);
 
 //Calling the intervals
-
 setInterval(() => {
     const element = document.querySelector("#cards > section:nth-child(1)")
     element.classList.add("card__outro");
@@ -121,3 +111,21 @@ setInterval(() => {
 
     })
 }, 6000);
+
+
+// Scroll to top button
+window.onscroll = function () {
+    if (window.pageYOffset > 300) {
+        //Show back to top button
+        resetScroll.classList.add('show');
+        resetScroll.classList.remove('hide');
+    } else {
+        // after button is pressed and the page is scrolled back to the top the button will be hidden with animation
+        resetScroll.classList.remove('show');
+        resetScroll.classList.add('hide');
+    }
+}
+
+resetScroll.addEventListener('click', () => {
+    window.scrollTo({ top: 0 });
+});

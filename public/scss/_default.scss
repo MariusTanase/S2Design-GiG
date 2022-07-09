@@ -12,6 +12,7 @@ html{
 body{
     color: $text-color;
     overflow-x: hidden;
+    position: relative;
 }
 
 img{
@@ -24,6 +25,36 @@ button{
     cursor: pointer;
 }
 
+.resetScroll{
+    position: fixed;
+    right: 2%;
+    bottom: 10%;
+    opacity: 0;
+
+    border: none;
+    border-radius: 2rem;
+    
+    width: 2.5rem;
+    height: 2.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0px 0px 5px 3px rgba(189, 184, 184, 0.5);
+    cursor: pointer;
+
+    z-index: 999;
+
+    background-color: $dark-background;
+     i{
+        color: $text-color;
+        font-size: 1.5rem;
+        margin: 0;
+        padding: 0;
+     }
+}
+
 .container{
     padding: 2rem 6.25rem;
 }
@@ -31,5 +62,22 @@ button{
 @media screen and(max-width: 768px) {
     #container{
         padding: 1rem 2rem;
+    }
+}
+
+
+.show{
+    animation: fadeIn 1s ease forwards;
+}
+.hide{
+    animation: fadeOut 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }
