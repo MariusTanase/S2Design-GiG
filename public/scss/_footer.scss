@@ -20,17 +20,17 @@ footer {
 
         div {
             display: flex;
-            gap: 3rem;
+            gap: $mgBig;
 
-            margin-top: 3rem;
+            margin-top: $mgBig;
 
             h3 {
                 font-size: 2rem;
             }
 
             .contact__button {
-                width: 3.5rem;
-                height: 3.5rem;
+                width: $mgBig;
+                height: $mgBig;
                 cursor: pointer;
 
                 font-size: 2rem;
@@ -41,7 +41,7 @@ footer {
                 align-items: center;
 
                 border: 1px solid $text-color;
-                border-radius: 2rem;
+                border-radius: $mgMediu;
 
                 background-color: transparent;
 
@@ -60,7 +60,7 @@ footer {
         min-height: 15vh;
         flex-wrap: wrap;
         gap: 1rem;
-        margin: 3rem 0;
+        margin: $mgBig 0;
 
         h3 {
             font-size: 2rem;

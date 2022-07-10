@@ -22,7 +22,7 @@
         width: 300px;
         min-height: 600px;
         color: $dark-text;
-        margin-left: 1rem;
+        margin-left: $mgSmall;
         position: relative;
         z-index: 1;
         cursor: pointer;
@@ -31,7 +31,7 @@
             font-size: 1.2rem;
             font-weight: bold;
             letter-spacing: .2rem;
-            margin: 1rem 0;
+            margin: $mgSmall $mgNull;
         }
 
         .card__text {
@@ -69,33 +69,12 @@
 }
 
 .card__outro {
-    animation: fadeOut 1s;
+    animation: fadeOutCard 1s;
 }
 
 .card__intro{
-    animation: card-swipe-left 1s;
+    animation: fadeInCard 1s;
 }
 
-@keyframes card-swipe-left {
-    0% {
-        transform: translateX(5%);
-        opacity: 0;
-    }
 
-    100% {
-        transform: translateX(0%);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateX(-5%);
-        opacity: 0;
-    }
-}
 

@@ -5,10 +5,10 @@
     opacity: 0;
 
     border: none;
-    border-radius: 2rem;
+    border-radius: $mgMediu;
     
-    width: 2.5rem;
-    height: 2.5rem;
+    width: $mgMediu;
+    height: $mgMediu;
 
     display: flex;
     align-items: center;
@@ -26,4 +26,25 @@
         margin: 0;
         padding: 0;
      }
+}
+
+
+.headerBg{
+    background: $dark-background;
+}
+
+.nav__inactive{
+    animation: fadeOutNav 1s ease;
+}
+
+@keyframes fadeOutNav {
+
+    0%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+    
 }

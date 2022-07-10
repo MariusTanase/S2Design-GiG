@@ -2,13 +2,16 @@
 const resposiveButton = document.querySelector('.button__responsive');
 const cardContainer = document.querySelector("#cards");
 const resetScroll = document.querySelector(".resetScroll");
+const headerElement = document.querySelector(".header");
+const navElements = document.querySelectorAll(".navbar__link");
+const navElement = document.querySelector('nav');
+const navActive = document.querySelector('.nav__active');
+
 //Buton de mobil
 resposiveButton.addEventListener('click', () => {
-    const nav = document.querySelector('nav');
-    nav.classList.toggle('nav__active');
-
-    if (!nav.classList.contains('nav__active')) {
-        nav.classList.add("fadeOutAnimation")
+    navElement.classList.toggle('nav__active');
+    if (navElement.classList.contains('nav__inactive')) {
+        navElement.classList.remove('nav__inactive');
     }
 })
 
@@ -81,6 +84,7 @@ function createCards(item) {
 
 // Creating animation to remove first element and add it to the end of the array at each 3 seconds
 let counter = 4;
+
 function removeFirstElement() {
     const firstElement = document.querySelector(".card");
     cardContainer.removeChild(firstElement);
@@ -115,17 +119,31 @@ setInterval(() => {
 
 // Scroll to top button
 window.onscroll = function () {
-    if (window.pageYOffset > 300) {
+    if (window.pageYOffset > 100) {
         //Show back to top button
         resetScroll.classList.add('show');
         resetScroll.classList.remove('hide');
+        headerElement.classList.add('headerBg')
     } else {
         // after button is pressed and the page is scrolled back to the top the button will be hidden with animation
         resetScroll.classList.remove('show');
         resetScroll.classList.add('hide');
+        headerElement.classList.remove('headerBg')
     }
 }
 
 resetScroll.addEventListener('click', () => {
-    window.scrollTo({ top: 0 });
+    window.scrollTo({
+        top: 0
+    });
+});
+
+navElements.forEach(e => {
+    e.addEventListener('click', () => {
+        navElement.classList.add('nav__inactive');
+        setTimeout(() => {
+            navElement.classList.remove('nav__active');
+        }, 500);
+        
+    });
 });

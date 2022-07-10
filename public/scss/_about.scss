@@ -4,13 +4,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: $mgBig;
     flex-direction: row;
 
-    .about__left {
+    & > * {
         flex-basis: 100%;
-
-
+    }
+    .about__left {
         .about__image {
             width: 100%;
             background-size: cover;
@@ -19,9 +19,7 @@
     }
 
     .about__right {
-
-        flex-basis: 100%;
-        margin-left: 4em;
+        margin-left: $mgBig;
         align-self: center;
         justify-self: flex-start;
         color: $dark-text;
@@ -31,7 +29,7 @@
             line-height: 160%;
             max-width: 20ch;
             width: 100%;
-            margin-bottom: 3rem;
+            margin-bottom: $mgBig;
         }
 
         .about__text {
@@ -48,7 +46,7 @@
 
 
     .about{
-        margin-top: 3rem;
+        margin-top: $mgBig;
 
         .about__left{
             display: block;
@@ -56,7 +54,7 @@
 
         .about__right{
             width: 100%;
-            margin-bottom: 3rem;
+            margin-bottom: $mgBig;
             .about__title{
                 font-size:2rem;
             }
