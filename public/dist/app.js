@@ -123,12 +123,10 @@ window.onscroll = function () {
         //Show back to top button
         resetScroll.classList.add('show');
         resetScroll.classList.remove('hide');
-        headerElement.classList.add('headerBg')
     } else {
         // after button is pressed and the page is scrolled back to the top the button will be hidden with animation
         resetScroll.classList.remove('show');
         resetScroll.classList.add('hide');
-        headerElement.classList.remove('headerBg')
     }
 }
 

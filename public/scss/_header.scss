@@ -7,7 +7,7 @@
     align-items: center;
 
     flex-wrap: wrap;
-
+    background: transparent;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -112,69 +112,6 @@
 
 .white {
     color: $text-color;
-}
-
-@media screen and (max-width: 1024px) {
-    .header {
-        position: sticky;
-        top: 0;
-
-        ul {
-            margin-top: 1rem;
-            flex-direction: column;
-
-            li {
-                margin-top: 5rem;
-            }
-        }
-
-        nav {
-            display: none;
-
-
-        }
-
-        .nav__active {
-            position: fixed;
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-
-            font-size: 2rem;
-
-            top: 0;
-            left: 0;
-
-            background: $header-bg;
-
-            width: 100%;
-            height: 100vh;
-            animation: fadeIn 1s ease;
-
-            ul {
-                li {
-                    a {
-                        color: $dark-text;
-                    }
-                }
-            }
-
-        }
-
-        .button__responsive {
-            display: block;
-        }
-
-        #button__header {
-            display: none;
-        }
-    }
-
-    // .hero__clipart{
-    //     display: none;
-    // }
 }
 
 
