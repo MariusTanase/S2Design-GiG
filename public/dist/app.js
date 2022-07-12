@@ -20,30 +20,40 @@ const item = [{
         name: "Dormitory Design",
         image: "./public/dist/images/cards/Image 1.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
-        date: "12/12/2019"
+        date: "12/12/2019",
+        link: "https://mariustanase.com"
     }, {
         name: "Garden Design",
         image: "./public/dist/images/cards/Image 2.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
-        date: "12/12/2018"
+        date: "12/12/2018",
+        link: "https://mariustanase.com"
+
     }, {
         name: "Forest Gardern Design",
         image: "./public/dist/images/cards/Image 3.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
-        date: "12/12/2017"
+        date: "12/12/2017",
+        link: "https://mariustanase.com"
+
     }, {
         name: "Library Corner Design",
         image: "./public/dist/images/cards/Image 4.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
-        date: "12/12/2016"
+        date: "12/12/2016",
+        link: "https://mariustanase.com"
+
     },
     {
         name: "Proiectul 5",
         image: "./public/dist/images/cards/Image 1.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
-        date: "12/12/2015"
+        date: "12/12/2015",
+        link: "https://mariustanase.com"
+
     }
 ];
+
 //create a card based on counter and show it on the screen
 function createCard(item) {
     //Create card section
@@ -63,14 +73,26 @@ function createCard(item) {
     description.classList.add("card__text");
     description.innerText = item.description;
     //creating the date of the card
-    const date = document.createElement("p");
-    date.classList.add("card__date");
-    date.innerText = item.date;
-    //appending the image, title, description and date to the card
+
+    const dateOfProject = document.createElement("p");
+    dateOfProject.classList.add("card__date");
+    dateOfProject.innerText = item.date;
+
+    const linkToProject = document.createElement("a");
+    linkToProject.innerText = "View Project";
+    linkToProject.href = item.link;
+    linkToProject.classList.add("card__link");
+    //Append all the sub-data to the card including the creation of the div and a class to it.
+    const subData = document.createElement('div');
+    subData.classList.add("card__subdata");
+    subData.appendChild(dateOfProject);
+    subData.appendChild(linkToProject);
+    //Append all the elements to the card
     card.appendChild(image);
     card.appendChild(title);
     card.appendChild(description);
-    card.appendChild(date);
+    card.appendChild(subData);
+    //Append the card to the card container
     cardContainer.appendChild(card);
 }
 
@@ -119,14 +141,17 @@ setInterval(() => {
 
 // Scroll to top button
 window.onscroll = function () {
-    if (window.pageYOffset > 100) {
+    if (window.pageYOffset > 1) {
         //Show back to top button
         resetScroll.classList.add('show');
         resetScroll.classList.remove('hide');
+        headerElement.classList.add('headerbg')
     } else {
         // after button is pressed and the page is scrolled back to the top the button will be hidden with animation
         resetScroll.classList.remove('show');
         resetScroll.classList.add('hide');
+        headerElement.classList.remove('headerbg')
+
     }
 }
 

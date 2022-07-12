@@ -1,5 +1,4 @@
 .header {
-    // background: $header-bg;
     width: 100%;
     position: fixed;
     display: flex;
@@ -83,9 +82,6 @@
     width: 100%;
     height: 120vh;
 
-    // Navbar
-
-
     // Background images in HERO
     img {
         position: absolute;
@@ -114,4 +110,7 @@
     color: $text-color;
 }
 
+.headerbg{
+    background: $dark-text;
+}
 

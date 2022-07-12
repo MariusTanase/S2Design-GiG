@@ -49,3 +49,14 @@
         opacity: 0;
     }
 }
+
+@keyframes linkUnderline {
+    0%{
+        
+        text-decoration-line: underline;
+    }
+
+    100%{
+        text-decoration-line: none;
+    }
+}

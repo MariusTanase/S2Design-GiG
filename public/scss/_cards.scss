@@ -1,17 +1,19 @@
 #cards {
 
     // responsive card area
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    // max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(calc(300px + 1rem), 1fr));
+    grid-auto-flow: row;
+    justify-items: center;
+    gap: $mgMediu;
+
     list-style: none;
+
     position: relative;
     z-index: 1;
-    overflow: hidden;
-    max-width: 1400px;
+    
     margin: 0 auto;
+    gap: $mgSmall;
 
     .card {
         // all the cards has to be equal on height and witdh
@@ -19,13 +21,19 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
+
         width: 300px;
         min-height: 600px;
         color: $dark-text;
         margin-left: $mgSmall;
         position: relative;
         z-index: 1;
-        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+            box-shadow: 4px 4px 5px 5px $text-color;
+
+        }
 
         .card__title {
             font-size: 1.2rem;
@@ -63,12 +71,53 @@
 
     }
 
-    .card__date {
-        margin-top: $mgSmall;
-        font-size: 1rem;
-        font-weight: bold;
-        color: $dark-text;
-        letter-spacing: 0.3rem;
+    .card__subdata {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        flex-basis: 100%;
+
+        .card__date {
+            margin-top: $mgSmall;
+            font-size: 1rem;
+            font-weight: bold;
+            color: $dark-text;
+            letter-spacing: 0.2rem;
+        }
+
+        .card__link {
+            margin-top: $mgSmall;
+            font-size: 1rem;
+            font-weight: $semi-bold;
+            color: $dark-text;
+            letter-spacing: 0.1rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all .5s linear;
+            width: max-content;
+            position: relative;
+
+            &:hover {
+                text-decoration: none;
+            }
+
+            &::after {
+                border-radius: 1em;
+                border-top: .1em solid $button-bg;
+                content: "";
+                position: absolute;
+                right: 100%;
+                bottom: .14em;
+                left: 0;
+                transition: right .5s ease-in-out;
+            }
+
+            &:hover::after {
+                right: 0;
+            }
+        }
     }
 }
 
@@ -76,9 +125,6 @@
     animation: fadeOutCard 1s;
 }
 
-.card__intro{
+.card__intro {
     animation: fadeInCard 1s;
 }
-
-
-

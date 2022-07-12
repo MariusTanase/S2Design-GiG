@@ -31,17 +31,6 @@ button{
     padding: $mgMediu 6.25rem;
 }
 
-// Small Desktop screen viewport
-
-// Tablet viewport
-@media screen and (max-width: 768px) {
-    .container{
-        padding: 1rem 2rem;
-    }
-}
-
-// mobile viewport
-
 
 .show{
     animation: fadeIn 1s ease forwards;

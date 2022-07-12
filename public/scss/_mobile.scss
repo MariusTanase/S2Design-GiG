@@ -1,8 +1,8 @@
 @media screen and (max-width: 1024px) {
     .header {
+        margin-top: -7rem;
         position: sticky;
         top: 0;
-        background: $dark-text;
 
         ul {
             margin-top: 1rem;
@@ -55,6 +55,9 @@
         }
     }
 
+
+
+
     .sub__landing {
         height: auto;
 
@@ -62,17 +65,20 @@
             width: 100%;
         }
     }
+
+    .container {
+        padding: $mgMediu 4.25rem;
+    }
 }
+
+
+
 
 @media screen and (max-width: 768px) {
     .hero {
         .hero__form {
             form {
                 padding: 0 .75rem;
-                // .form__div {
-                //     padding: 0 1rem;
-                //     margin: 1rem 0;
-                // }
 
                 .submit__button {
                     width: 2.5rem;
@@ -81,7 +87,186 @@
             }
         }
 
+        .container {
+            padding: $mgMediu 2.25rem;
+        }
+    }
+
+    .card__container {
+
+        .card__text-wrapper {
+            flex-direction: column;
+            align-items: center;
+
+            margin: $mgBig 0;
+
+            .card__title {
+                margin: $mgSmall 0;
+            }
+
+            .card__description {
+                max-width: 80%;
+            }
+        }
+    }
+
+    .card__cot {
+        margin: $mgMediu auto;
+    }
+
+    .about {
+
+
+        flex-direction: column;
+
+        .about__right {
+            flex-direction: column;
+            align-items: center;
+
+            margin: 0 $mgSmall;
+
+            .about__title {
+                max-width: 100%;
+                margin: $mgMediu 0;
+            }
+
+            .about__text {
+                max-width: 80%;
+                margin: 0 auto;
+                text-align: center;
+                font-size: .9rem;
+            }
+        }
+    }
+
+    // footer responsive for ipad air
+
+
+
+}
+
+
+
+@media screen and (max-width: 740px) {
+    #landing>section>section.hero__text-wrapper {
+
+        width: 100%;
+
+        .hero__title {
+            font-size: 2em;
+        }
+
+        .hero__description {
+            font-size: .9rem;
+        }
+
+    }
+
+    #landing>section>section.hero__form {
+        display: none;
     }
 }
 
-@media screen and (max-width: 350px) {}
+@media screen and (max-width: 470px) {
+
+    .header {
+        h1 {
+            font-size: 1.5rem;
+        }
+    }
+
+    #landing>section>section.hero__text-wrapper {
+        margin-top: 6rem;
+        width: 100%;
+
+        .hero__title {
+            font-size: 1.75em;
+            width: 100%;
+            height: auto;
+        }
+
+        .hero__description {
+            font-size: .7rem;
+        }
+
+    }
+
+    .sub__landing {
+        margin: $mgSmall 0;
+
+        .sub__landing-text {
+            font-size: 1rem;
+        }
+    }
+
+    .card__container {
+
+        .card__text-wrapper {
+            margin: $mgMediu 0;
+
+            .card__title {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .card__description {
+                max-width: 80%;
+            }
+        }
+    }
+
+    .about {
+        .about__right {
+            .about__title {
+                text-align: center;
+                font-size: 1.5rem;
+                margin: calc($mgBig + $mgMediu) 0 $mgMediu 0;
+            }
+
+            .about__text {
+                font-size: .9rem;
+            }
+        }
+    }
+
+    #contact>section.contact__form {
+        h2 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.75rem;
+        }
+
+        button {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        i {
+            font-size: 1rem;
+        }
+    }
+
+    #contact>section.contact__details {
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: .8rem;
+        }
+
+        a {
+            font-size: .8rem;
+        }
+    }
+
+    #contact>p {
+        font-size: .8rem;
+    }
+
+    .container {
+        padding: $mgMediu 1.25rem;
+    }
+}
