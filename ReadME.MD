@@ -2,7 +2,7 @@
 
 ## Designed in Figma
 
-Link: ![figma](https://www.figma.com/file/MUKuixOB40eXBiS9cAt4Vo/S2Design-Mockup)
+<a href="https://www.figma.com/file/MUKuixOB40eXBiS9cAt4Vo/S2Design-Mockup">Link towards Figma Project</a>
 
 ## Live Version: https://interiordesignmt.netlify.app
 
