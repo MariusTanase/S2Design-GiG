@@ -151,7 +151,6 @@ window.onscroll = function () {
         resetScroll.classList.remove('show');
         resetScroll.classList.add('hide');
         headerElement.classList.remove('headerbg')
-
     }
 }
 
@@ -167,20 +166,26 @@ navElements.forEach(e => {
         setTimeout(() => {
             navElement.classList.remove('nav__active');
         }, 500);
-        
+
     });
 });
 
-// Animate on scroll when elements come in viewport
-const animateOnScroll = () => {
-    const elements = document.querySelectorAll('.animate__onScroll');
-    elements.forEach(element => {
-        const rect = element.getBoundingClientRect();
-        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-        if (isVisible) {
-            element.classList.add('animate__fadeIn');
+// Animate on scroll when elements come in viewport js
+function reveal() {
+    var element = document.querySelectorAll(".reveal");
+    for (var i = 0; i < element.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = element[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+        if (elementTop < windowHeight - elementVisible) {
+            element[i].classList.add("active");
+        } else {
+            element[i].classList.remove("active");
         }
     }
-    );
 }
 
+window.addEventListener("scroll", reveal);
+
+// To check the scroll position on page load
+reveal();
