@@ -171,5 +171,16 @@ navElements.forEach(e => {
     });
 });
 
-// Initialize AoS library
-AOS.init();
+// Animate on scroll when elements come in viewport
+const animateOnScroll = () => {
+    const elements = document.querySelectorAll('.animate__onScroll');
+    elements.forEach(element => {
+        const rect = element.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+        if (isVisible) {
+            element.classList.add('animate__fadeIn');
+        }
+    }
+    );
+}
+
