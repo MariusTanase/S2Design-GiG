@@ -170,3 +170,6 @@ navElements.forEach(e => {
         
     });
 });
+
+// Initialize AoS library
+AOS.init();

@@ -9,16 +9,14 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/public/dist/css/main.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
     <title>S2Design</title>
 </head>
 
 <body>
     <button class="resetScroll"><i class="fa fa-arrow-up"></i></button>
-    <header class="header container">
+    <header  class="header container ">
         <h1>S2<span>Design</span></h1>
-        <nav>
+        <nav data-aos="fade-left">
             <ul class="navbar__container">
                 <li class="navbar__link">
                     <a href="#about">Despre</a>
@@ -40,12 +38,12 @@
     <section id="landing">
         <section class="hero container">
             <section class="hero__text-wrapper">
-                <h2 class="hero__title">The Creative way to create your dream home</h2>
-                <p class="hero__description">Let's find your dream home with S2 Design.<br>Partner with a local
+                <h2 class="hero__title ">The Creative way to create your dream home</h2>
+                <p class="hero__description ">Let's find your dream home with S2 Design.<br>Partner with a local
                     contractors to design the home or
                     apartment that you envision</p>
             </section>
-            <section class="hero__form">
+            <section class="hero__form animate__animated animate__jackInTheBox" >
                 <form>
                     <div class="form__div border">
                         <label for="location">Location <i class="fa-solid fa-location-pin"></i></label>
@@ -69,7 +67,7 @@
     </section>
 
     <section class="sub__landing container" id="home">
-        <h2 class="sub__landing-text">“Explore unique interior designs sought internationally
+        <h2 class="sub__landing-text ">“Explore unique interior designs sought internationally
             for luxury real estate in the world.” We provide unrivaled
             attention to details up to the finest texture.</h2>
     </section>
@@ -189,7 +187,6 @@
         <p class="contact__copyright">&copy 2022 Marius T.</p>
     </footer>
     <script defer src="./public/dist/app.js"></script>
-    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 
 </html>
