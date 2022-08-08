@@ -2,7 +2,7 @@
 const resposiveButton = document.querySelector('.button__responsive');
 const cardContainer = document.querySelector("#cards");
 const resetScroll = document.querySelector(".resetScroll");
-const headerElement = document.querySelector(".header");
+const headerElement = document.querySelector(".header__background");
 const navElements = document.querySelectorAll(".navbar__link");
 const navElement = document.querySelector('nav');
 const navActive = document.querySelector('.nav__active');
@@ -141,16 +141,16 @@ setInterval(() => {
 
 // Scroll to top button
 window.onscroll = function () {
-    if (window.pageYOffset > 1) {
+    if (window.pageYOffset > 400) {
         //Show back to top button
         resetScroll.classList.add('show');
         resetScroll.classList.remove('hide');
-        headerElement.classList.add('headerbg')
+        headerElement.style.opacity= 1;
     } else {
         // after button is pressed and the page is scrolled back to the top the button will be hidden with animation
         resetScroll.classList.remove('show');
         resetScroll.classList.add('hide');
-        headerElement.classList.remove('headerbg')
+        headerElement.style.opacity = 0;
     }
 }
 
