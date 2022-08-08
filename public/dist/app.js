@@ -185,7 +185,32 @@ function reveal() {
     }
 }
 
+
+
+function parallaxEffect() {
+    window.addEventListener("scroll", function (event) {
+
+        let top = this.scrollY;
+
+        const layers = document.getElementsByClassName("parallax");
+        let layer, speed, yPos;
+        for (let i = 0; i < layers.length; i++) {
+            layer = layers[i];
+            speed = layer.getAttribute('data-speedControl');
+            let yPos = (top * speed / 150);
+            layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
+
+        }
+    });
+}
 window.addEventListener("scroll", reveal);
 
+function startSite() {
+    reveal();
+    parallaxEffect();
+}
+
+document.body.onload = startSite();
+    
+
 // To check the scroll position on page load
-reveal();

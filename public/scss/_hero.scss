@@ -5,6 +5,14 @@
     flex-direction: column;
     margin-top: 7rem;
 
+    z-index: -100;
+
+    overflow: hidden;
+
+    position: sticky;
+    top: 2rem;
+    left: 0;
+
     .hero__text-wrapper {
         margin-top: 5rem;
         width: 60%;
@@ -51,6 +59,8 @@
             label {
                 display: block;
 
+                outline: none;
+
                 color: $dark-text;
                 border-color: none;
                 border-radius: 1rem;
@@ -62,8 +72,9 @@
                 background: $header-bg;
                 border: none;
             }
+
             input:focus{
-                box-shadow: 4px 4px 5px 4px rgba(0,0,0,0.3);
+                box-shadow: 4px 4px 5px 4px rgba(0,0,0,0.05);
             }
 
             label{
@@ -111,3 +122,4 @@ i{
 
     color: $button-bg;
 }
+

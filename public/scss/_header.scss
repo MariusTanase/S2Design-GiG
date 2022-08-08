@@ -1,6 +1,7 @@
 .header {
     width: 100%;
     position: fixed;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,7 +16,6 @@
         font-size: 2rem;
         text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.75);
         z-index: 2;
-
     }
 
     ul {
@@ -86,13 +86,23 @@
     img {
         position: absolute;
         width: 100%;
-        z-index: -2;
+        z-index: -1;
+    }
+
+    .hero__house{
+        z-index: -100;
+        bottom: 0;
+        left: 0;
+    }
+
+    .hero__sky{
+        z-index: -102;
     }
 
     // White lines over houses
     .hero__clipart {
         background: #fff;
-        z-index: -1;
+        z-index: 1;
         position: absolute;
 
         bottom: -1px;
