@@ -120,7 +120,15 @@
     color: $text-color;
 }
 
-.headerbg{
-    background: $dark-text;
+.header__background{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -10%;
+    width: 120%;
+    height: 6rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+    filter: blur(.5rem);
 }
 
