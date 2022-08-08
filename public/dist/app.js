@@ -3,6 +3,7 @@ const resposiveButton = document.querySelector('.button__responsive');
 const cardContainer = document.querySelector("#cards");
 const resetScroll = document.querySelector(".resetScroll");
 const headerElement = document.querySelector(".header__background");
+const heroElement = document.querySelector(".hero");
 const navElements = document.querySelectorAll(".navbar__link");
 const navElement = document.querySelector('nav');
 const navActive = document.querySelector('.nav__active');
@@ -45,8 +46,8 @@ const item = [{
 
     },
     {
-        name: "Proiectul 5",
-        image: "./public/dist/images/cards/Image 1.jpg",
+        name: "Underground Design",
+        image: "./public/dist/images/cards/Image 5.jpg",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.",
         date: "12/12/2015",
         link: "https://mariustanase.com"
@@ -68,6 +69,7 @@ function createCard(item) {
     const title = document.createElement("h2");
     title.classList.add("card__title");
     title.innerText = item.name;
+
     //Creating the card description
     const description = document.createElement("p");
     description.classList.add("card__text");
@@ -197,7 +199,9 @@ function parallaxEffect() {
         for (let i = 0; i < layers.length; i++) {
             layer = layers[i];
             speed = layer.getAttribute('data-speedControl');
-            let yPos = (top * speed / 150);
+            let yPos = (top * speed / 150) * -1;
+
+            heroElement.style.top= `${negativePosition}px`;
             layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
 
         }
