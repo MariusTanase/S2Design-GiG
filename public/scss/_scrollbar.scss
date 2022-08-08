@@ -1,0 +1,23 @@
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #c2c2c2 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+// transparent scroll bar track
+  
+  *::-webkit-scrollbar-track {
+    background: transparent;
+    opacity: 0;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(180deg, #b5c5f3 1%, #86d4f9 80%);
+    box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+    border-radius: 10px;
+    height: 2rem;
+  }
